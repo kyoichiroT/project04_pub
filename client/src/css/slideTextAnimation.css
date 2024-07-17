@@ -1,0 +1,45 @@
+@keyframes slideLeft {
+    0% {
+        transform: translateX(400%);
+    }
+
+    25% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.slide-text-wrapper{
+    position: absolute;
+}
+.sliding-text {
+    position: fixed;
+    /* 画面に固定 */
+    top: 40%;
+    /* 上から50%の位置に配置 */
+    left: 50%;
+    /* 左から50%の位置に配置 */
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    /* 中央に配置 */
+    white-space: nowrap;
+    animation: slideLeft 1.5s linear;
+    z-index: 2;
+}
+
+.player-color {
+    /* プレイヤー用のスタイル */
+    color: darkblue;
+}
+
+.opponentplayer-color {
+    /* 対戦相手用のスタイル */
+    color: crimson;
+}

@@ -1,0 +1,34 @@
+.message {
+    font-size: 1.8rem;
+}
+
+.buttons .confirm-button,
+.buttons .cancel-button {
+    width: 12rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin: auto;
+}
+.buttons .confirm-button.donZaloog-choice,
+.buttons .cancel-button.donZaloog-choice
+{
+    font-size: 1.2rem;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+}
+@media (max-width: 1200px) {
+    .buttons {
+        width: 100%;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .message {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+}

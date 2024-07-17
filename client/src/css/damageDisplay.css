@@ -1,0 +1,40 @@
+/* ダメージ表示の基本スタイル */
+.damage-display {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /* padding: 10px; */
+    /* color: white; */
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    font-size: 3rem;
+    z-index: 4;
+    height: 0;
+    max-height: 0;
+}
+
+/* 画面中央上部 */
+.damage-display.opponent {
+    top: 20%;
+}
+
+/* 画面中央下部 */
+.damage-display.player {
+    bottom: 30%;
+}
+
+/* ダメージ表示の色 */
+.damage-display.damage {
+    color: red;
+}
+
+.damage-display.heal {
+    color: green;
+}
+
+/* フェードアウト用のクラス */
+.fade-out {
+    opacity: 0 !important;
+}

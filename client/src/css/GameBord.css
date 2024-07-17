@@ -1,0 +1,1015 @@
+/* GameBoard.css */
+*{
+    box-sizing: border-box;
+}
+h3{
+    margin: 0;
+}
+
+.game-board {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 80rem;
+}
+.field{
+    position: relative;
+}
+
+.zone {
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    min-height: 7rem;
+    position: relative;
+}
+
+.card-pic{
+    width:4rem;
+    height: 5.831rem;
+}
+.card-img-wrapper{
+    max-height: 5.831rem;
+}
+.row{
+    display: flex;
+}
+.deck{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.deck,
+.banish-zone,
+.graveyard{
+    position: relative;
+    display: flex;
+    order: -1;
+    height: 5rem;
+}
+/* .deck .card,
+.banish-zone .card,
+.graveyard .card{
+    z-index: 1;
+    position: absolute;
+} */
+.deck,
+.graveyard,
+.banish-zone{
+    flex-direction: column;
+}
+.deck .card-component,
+.graveyard .card-component,
+.banish-zone .card-component {
+    margin-bottom: -6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .card:nth-child(1){
+    z-index: 2;
+} */
+/* .opponent{
+    margin-bottom: 5rem;
+} */
+
+/* .hand-wrapper,
+.spel-trap-zone-wrapper,
+.monster-zone-wrapper{
+    flex-basis: 70%
+} */
+.hand-wrapper{
+    display: flex;
+}
+.deck-wrapper{
+    width: 8rem;
+}
+.opponent .hand-row{
+    justify-content: center;
+}
+.opponent .spel-trap-zone-row{
+    justify-content: left;
+}
+.opponent .monster-zone-row{
+    justify-content: left;
+}
+.you .hand-row{
+    justify-content: center;
+}
+.spel-trap-row{
+    justify-content: right;
+}
+
+/* .banish-zone-wrapper,
+.graveyard-wrapper,
+.deck-wrapper{
+    flex-basis: 5rem;
+} */
+.banish-zone-wrapper,
+.graveyard-wrapper{
+    width: 8rem;
+}
+.monster-row,
+.spel-trap-row,
+.hand-row{
+    justify-content: center;
+}
+
+.hand.zone,
+.spel-trap-zone.zone,
+.monster-zone.zone,
+.banish-zone-wrapper,
+.monster-zone-wrapper,
+.graveyard-zone-wrapper,
+.spel-trap-zone-wrapper,
+.deck-zone-wrapper,
+.hand-zone-wrapper{
+    display: flex;
+}
+.monster-zone,
+.spel-trap-zone {
+    width: 40rem;
+}
+
+.card p{
+    margin: 0;
+}
+.hand.zone{
+    justify-content: center;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    min-width: 6rem;
+}
+.opponent .hand.zone{
+    flex-direction: row-reverse;
+}
+
+.you .def{
+    transform: rotate(270deg);
+}
+.opponent .card-pic{
+    transform: rotate(180deg);
+}
+.opponent .card-pic.def{
+    transform: rotate(90deg);
+}
+
+.card-selection-wrapper{
+    position: fixed;
+    top:0;
+    background-color: gray;
+    width: 80rem;
+    height: 30%;
+    z-index: 10;
+    opacity: 0.8;
+}
+.attack-message-pop-up,
+.destroy-spell-trap-message-pop-up{
+    top:50vh
+}
+.hand-over-flow.buttons button{
+    font-size: 1.5rem;
+}
+.card-choice-wrapper {
+    position: fixed;
+    top:0;
+    background-color: gray;
+    width: 80rem;
+    height: 30%;
+    z-index: 11;
+    opacity: 0.8;
+}
+.card-choice-wrapper.minimized {
+    background-color: black;
+    color: white;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+.virus {
+    height: 100%;
+}
+.virus ul li button{
+    font-size: 1.2rem;
+}
+.virus .confirm-buttons{
+    display: flex;
+    min-width: 20rem;
+    justify-content: space-around;
+}
+.virus .confirm-button{
+    font-size: 2rem;
+}
+.card-list{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-x: scroll;
+    white-space: nowrap; */
+}
+.card-list-wrapper .card-list{
+    margin-left: auto;
+    margin-right: auto;
+}
+.selected-cards{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-selection.minimized{
+    display: none;
+}
+.card-selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.card-selection-wrapper.minimized{
+    background-color: black;
+    color: white;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+.flex-item{
+    flex: 1;
+}
+.card-list.flex-item{
+    flex-direction: column;
+}
+.oppo-Cards{
+    display: flex;
+}
+.your-cards{
+    display: flex;
+}
+.card-component{
+    display: inline-block;
+    height: 6rem;
+    width: 4rem;
+}
+.cancel-button{
+    margin-top: auto;
+}
+.balckLusterSS{
+    width: 8rem;
+    height: 4rem;
+    font-size: 2rem;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+}
+.board-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.card-descriptions{
+    /* flex-grow: 3; */
+    width: 12rem;
+}
+/* .game-board{
+    flex-grow: 6;
+} */
+/* .board-options{
+    flex-grow: 1;
+} */
+.card-picture .big{
+    width: 12rem;
+}
+.card-descriptions .card-pic{
+    width: 12rem;
+    height: auto;
+}
+.banish-zone-wrapper,.graveyard-wrapper,.deck-wrapper{
+    /* flex-direction: column-reverse; */
+}
+
+.minimized-window {
+    width: 6rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.select-target.cancel-button button{
+    width: 12rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.changes-phase{
+    height: 5rem;
+}
+.phase-change-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5rem;
+}
+.phase-change-button{
+    height: 2rem;
+}
+.disconnected{
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* 子要素間に均等なスペースを配置 */
+    align-items: center;
+    /* アイテムを垂直方向の中央に配置 */
+    width: 100%;
+    /* コンテナの幅を設定 */
+}
+
+.spacer {
+    width: 8rem;
+    margin: 0.5rem;
+    /* 左側のスペースを取る */
+}
+
+
+.spel-trap-zone .card-component,
+.monster-zone .card-component,
+.spel-trap-zone .card,
+.monster-zone .card {
+    margin: auto;
+}
+
+
+/* 1番目の子は3番目に */
+.you .spel-trap-zone > div:nth-child(1),
+.you .monster-zone > div:nth-child(1) {
+    order: 3;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 2番目の子は4番目に */
+.you .spel-trap-zone > div:nth-child(2),
+.you .monster-zone > div:nth-child(2) {
+    order: 4;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 3番目の子は2番目に */
+.you .spel-trap-zone > div:nth-child(3),
+.you .monster-zone > div:nth-child(3) {
+    order: 2;
+    /* background-color: rgba(0, 255, 0, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 4番目の子は5番目に */
+.you .spel-trap-zone > div:nth-child(4),
+.you .monster-zone > div:nth-child(4) {
+    order: 5;
+    /* background-color: rgba(0, 255, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 5番目の子は1番目に */
+.you .spel-trap-zone > div:nth-child(5),
+.you .monster-zone > div:nth-child(5) {
+    order: 1;
+    /* background-color: rgba(255, 0, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.spel-trap-zone .card-component,
+.monster-zone .card-component,
+.spel-trap-zone .card,
+.monster-zone .card {
+    margin: auto;
+}
+
+/* 相手の1番目の子は3番目に */
+.opponent .spel-trap-zone > div:nth-child(1),
+.opponent .monster-zone > div:nth-child(1) {
+    order: 3;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 相手の2番目の子は2番目に */
+.opponent .spel-trap-zone > div:nth-child(2),
+.opponent .monster-zone > div:nth-child(2) {
+    order: 2;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 相手の3番目の子は4番目に */
+.opponent .spel-trap-zone > div:nth-child(3),
+.opponent .monster-zone > div:nth-child(3) {
+    order: 4;
+    /* background-color: rgba(0, 255, 0, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 相手の4番目の子は1番目に */
+.opponent .spel-trap-zone > div:nth-child(4),
+.opponent .monster-zone > div:nth-child(4) {
+    order: 1;
+    /* background-color: rgba(0, 255, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 相手の5番目の子は5番目に */
+.opponent .spel-trap-zone > div:nth-child(5),
+.opponent .monster-zone > div:nth-child(5) {
+    order: 5;
+    /* background-color: rgba(255, 0, 255, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.board-options{
+    max-width: 15%;
+}
+
+.background-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    font-size: 4rem;
+    z-index: -1;
+}
+.action-button{
+    z-index: 5;
+}
+.card-description span{
+    color: red;
+}
+
+.choicing{
+    position: relative;
+    height: 0;
+    left: 50%;
+    /* top: 15%; */
+    width: 20rem;
+    font-size: 2rem;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.life-point{
+    position: absolute;
+    font-size: 3rem;
+}
+.player-life-point{
+    color: darkblue;
+}
+.opponent-life-point{
+    color: crimson;
+}
+.activate.absolute-action-button{
+    position: absolute;
+    transform: translate(25%, 110%);
+}
+.activate.action-button.sinister-SSerpent{
+    position: absolute;
+    transform: translate(25%, -75%);
+}
+
+.phase-player{
+    color: darkblue;
+}
+.phase-opponent{
+    color: crimson;
+}
+.phase-display {
+    font-size: 1.6rem;
+}
+
+@keyframes backGroundFadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    33%,66% {
+        opacity: 0.6;
+    }
+}
+.fade-pic.faceDown{
+    /* ない方が自然? */
+    /* animation: fadeInOut 4s infinite; */
+}
+.fade-pic-up{
+    animation: backGroundFadeInOut 4s infinite;
+    /* animation-delay: 1s; */
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background-color: black;
+}
+.battle-result{
+    width: 100%;
+}
+
+.mobile-only{
+    display: none;
+}
+.display-private-cards-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 4rem;
+}
+.display-private-cards-header .minimize-button{
+    position: absolute;
+    left: 0;
+}
+.banish-zone-mobile-wrapper {
+    position: absolute;
+    z-index: 1;
+}
+
+.banish-zone-mobile-wrapper.opponent-player {
+    transform: translateY(5rem);
+}
+
+.banish-zone-mobile-wrapper.player {
+    transform: translateY(-2rem);
+}
+
+.banish-zone-mobile-wrapper button {
+    font-size: 0.5rem;
+    height: 1.5rem;
+    width: 3.2rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.banish-zone-mobile-wrapper .banish-span-first,
+.banish-zone-mobile-wrapper .banish-span-second {
+    display: inline-block;
+    /* テキストを別々の行に配置する */
+}
+.only-goats-zone{
+    display: flex;
+    width: 40rem
+}
+.only-goats-zone .card,
+.only-goats-zone .card-component{
+    margin: auto;
+}
+
+/* 1番目の子は3番目に */
+.you .only-goats-zone>div:nth-child(1) {
+    order: 3;
+}
+
+/* 2番目の子は4番目に */
+.you .only-goats-zone>div:nth-child(2){
+    order: 4;
+}
+
+/* 3番目の子は2番目に */
+.you .only-goats-zone>div:nth-child(3) {
+    order: 2;
+}
+
+/* 4番目の子は5番目に */
+.you .only-goats-zone>div:nth-child(4) {
+    order: 5;
+}
+
+/* 5番目の子は1番目に */
+.you .only-goats-zone>div:nth-child(5) {
+    order: 1;
+}
+
+/* 相手の1番目の子は3番目に */
+.opponent .only-goats-zone>div:nth-child(1) {
+    order: 3;
+}
+
+/* 相手の2番目の子は2番目に */
+.opponent .only-goats-zone>div:nth-child(2) {
+    order: 2;
+}
+
+/* 相手の3番目の子は4番目に */
+.opponent .only-goats-zone>div:nth-child(3) {
+    order: 4;
+}
+
+/* 相手の4番目の子は1番目に */
+.opponent .only-goats-zone>div:nth-child(4) {
+    order: 1;
+}
+
+/* 相手の5番目の子は5番目に */
+.opponent .only-goats-zone>div:nth-child(5) {
+    order: 5;
+}
+@media (min-width: 1200px) {
+    .action-buttons{
+        position: absolute;
+        /* opacity: 0.7; */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        min-height: 6rem;
+        justify-content: flex-end;
+    }
+    .action-button button{
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        height: 2rem;
+        /* background-color: rgba(255, 255, 255, 0.5); */
+        font-weight: 600;
+        font-size: 1.2;
+    }
+    .opponent-life-point {
+        position: absolute;
+        transform: translateY(-4rem);
+        color: crimson;
+        margin-left: 0.5rem;
+    }
+    .player-life-point {
+        position: absolute;
+        color: darkblue;
+        transform: translateY(7rem);
+        margin-left: 0.5rem;
+    }
+    .display-private-cards-header .back-button {
+        width: 8rem;
+        font-size: 2rem;
+    }
+    .banish-zone-mobile-wrapper.opponent-player {
+        transform: translateY(7rem);
+    }
+    .game-info{
+        position: absolute;
+        transform: translate(-17rem, 13rem);
+        min-width: 12rem;
+    }
+}
+/* スマートフォン用のスタイル */
+@media (max-width: 1200px) {
+    .mobile-only {
+        display: block;
+    }
+    .card-pic {
+        width: 2.8rem;
+        height: 4.373rem;
+    }
+    .card-component .card{
+        height: 4.373rem;
+        min-height: 4.373rem;
+    }
+    .card-img-wrapper{
+        max-height: 4.373rem;
+    }
+    .deck.zone .card-component{
+        min-height: 4.373rem;
+        max-height: 4.373rem;
+    }
+    .card-component{
+        width: auto;
+        height: auto;
+        margin-left: 0;
+        height: 4.373rem;
+        width: 2.8rem;
+    }
+    .fade-pic-up{
+        left: 0;
+    }
+    .board-wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    /* .game-board{
+        order: 1;
+    } */
+    .board-options{
+        order: 0;
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    /* .game-info{
+        order: 1;
+    } */
+    .wrapper{
+        margin: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .monster-zone-wrapper,
+    .spel-trap-zone-wrapper{
+        margin: 0.5rem;
+    }
+    .monster-zone,
+    .spel-trap-zone{
+        /* width: 24rem; */
+        width: auto;
+    }
+    .background-text{
+        /* font-size: 2rem; */
+        display: none;
+    }
+    .board-wrapper .card-descriptions.placeholder{
+        margin: auto;
+        /* margin-top: 3rem; */
+    }
+    .card-selection-wrapper,
+    .selecting-card,
+    .card-choice-wrapper{
+        /* 本番環境では要調整 */
+        top: 5%;
+        width: 100vw;
+        transform: translateX(-50%);
+        left: 50%;
+        height: 50%;
+    }
+    .card-choice-wrapper.minimized{
+        transform: translateX(0);
+        left: 0;
+    }
+    .display-card-wrapper{
+        width: 100%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    .card-list{
+        width: 100%;
+    }
+
+    .selecting-card.minimized{
+        width: auto;
+    }
+    .action-button button{
+        font-size: 0.5rem;
+        height: 2rem;
+        /* height: 2.3rem; */
+        margin-top: 1rem;
+        padding: 0;
+        text-align: center;
+    }
+    /* .changes-phase{
+        height: 2rem;
+    } */
+    .back-button{
+        font-size: 2rem;
+    }
+    .minimize-button{
+        width: 10rem;
+    }
+    .minimize-button button {
+        width: 7rem;
+        height: 4rem;
+        font-size: 1.8rem;
+    }
+    .action-button{
+        position: relative;
+        width: 2.8rem;
+    }
+    .selecting-card,
+    .card-selection-wrapper{
+        width: 100vw;
+        height: 33%;
+        top: 0;
+    }
+    #select-cards .selecting-card{
+        height: 60%;
+    }
+    #select-cards .selecting-card.minimized{
+        height: auto;
+    }
+    .selecting-card .minimized{
+        height: auto;
+        left: 0;
+        transform: translateY(0);
+    }
+    .card-selection-wrapper.attack-message-pop-up{
+        top: 50%;
+    }
+    .virus {
+        height: 70%;
+    }
+    .virus-type-list{
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        width: 24rem;
+        padding-left: 0;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .virus ul li button {
+        font-size: 1rem;
+        width: 7rem;
+    }
+    .card-description{
+        text-align: start;
+    }
+    .mobile-header{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .display-card-picture img{
+        width:2.4rem;
+        height: 3.5rem;
+    }
+    .card-descriptions .card-pic{
+        width: 6rem;
+    }
+    .deck,.graveyard,.banish-zone{
+        padding: 0;
+        padding-top: 9px;
+        padding-bottom: 0px;
+    }
+    .field.opponent .deck,
+    .field.opponent .graveyard,
+    .field.opponent .banish-zone{
+        /* padding-top: 12px; */
+    }
+
+    .spacer{
+        width: 3.3rem;
+        margin: 0;
+    }
+    .card.blank {
+        width: 2.8rem;
+        min-height: 4.373rem;
+    }
+    .deck-wrapper,.banish-zone-wrapper,.graveyard-wrapper {
+        width: 3.3rem;
+        /* height: 4.373rem; */
+    }
+    .player-life-point.mobile {
+        /* transform: translateY(-4rem); */
+        /* right: 5.4%;
+        top: 89%; */
+        color: darkblue;
+        position: absolute;
+        transform: translateY(4.7rem);
+        margin-left: 1px;
+    }
+    .opponent-life-point.mobile {
+        /* right: 82.6%;
+        top: 25%; */
+        color: crimson;
+        position: absolute;
+        transform: translatey(-1.5rem);
+        margin-left: 1px;
+    }
+    .life-point {
+        font-size: 1.2rem;
+    }
+    .board-options .card-descriptions.placeholder{
+        order: 0;
+    }
+    .changes-phase{
+        height: auto;
+    }
+    /* .sinisterSSerpent-option{
+        
+    } */
+    .board-options.mobile-footer .display-card-picture{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .mobile.card-description{
+        margin-bottom: 2rem;
+        /* 調整の余地あり */
+        min-height: 5rem;
+    }
+    .game-board {
+        width: auto;
+        margin: 0;
+    }
+    .zone{
+        padding: 3px;
+        min-height: 4rem;
+        max-height: 4.75rem;
+    }
+    .deck .card-component,
+    .graveyard .card-component,
+    .banish-zone .card-component {
+        margin-right: -2.8rem;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .deck,
+    .graveyard,
+    .banish-zone {
+        flex-direction: row;
+    }
+    /* .banish-zone-mobile-wrapper{
+        position: absolute;
+        z-index: 1;
+    }
+    .banish-zone-mobile-wrapper.opponent-player{
+        transform: translateY(5rem);
+    }
+    .banish-zone-mobile-wrapper.player{
+        transform: translateY(-2rem);
+    }
+    .banish-zone-mobile-wrapper button{
+        font-size: 0.5rem;
+        height: 1.5rem;
+        width: 3.2rem;
+        padding: 0;
+        white-space: nowrap;
+    }
+    .banish-zone-mobile-wrapper .banish-span-first,
+    .banish-zone-mobile-wrapper .banish-span-second {
+        display: inline-block;\
+    } */
+    .battle-status{
+        font-size: 0.7rem;
+    }
+    .card-overlay.counter{
+        font-size: 2rem;
+    }
+    .you .spel-trap-zone>div:nth-child(2),
+    .opponent .spel-trap-zone>div:nth-child(2),
+    .you .monster-zone>div:nth-child(2),
+    .opponent .monster-zone>div:nth-child(2),
+    .you .spel-trap-zone>div:nth-child(3),
+    .opponent .spel-trap-zone>div:nth-child(3),
+    .you .monster-zone>div:nth-child(3) ,
+    .opponent .monster-zone>div:nth-child(3) {
+        border-left: none;
+        border-right: none;
+    }
+    .messageLog-component{
+        margin: 1rem;
+    }
+    .activate.absolute-action-button {
+       /* transform: translateY(75%); */
+        bottom: 0;
+        transform: translateY(0);
+    }
+    .activate.absolute-action-button button{
+        font-size: 0.8rem;
+    }
+    .card-selection-header{
+        margin: 1rem;
+    }
+    .display-private-cards-header .minimize-button {
+        width: auto;
+    }
+    .display-private-cards.sentence h2{
+        font-size: 1.2rem;
+        margin: 0 1rem 0 1rem;
+    }
+    .display-private-cards.sentence h3{
+        font-size: 1rem;
+    }
+    .card-selection-wrapper.minimized {
+        transform: translateX(0);
+        left: 0;
+    }
+    .card-selection-wrappe .destroy-spell-trap-message-pop-up,
+    .card-selection-wrappe .attack-message-pop-up{
+        top: 50vh;
+    }
+    .banish-zone-mobile-wrapper .banish-zone{
+        position: absolute;
+        transform: translateY(-3rem);
+    }
+    .only-goats-zone {
+        width: auto
+    }
+    .game-info{
+        margin-top: 3rem;
+    }
+    .activate.action-button.sinister-SSerpent {
+        position: absolute;
+        transform: translate(100%, 0%);
+    }
+}

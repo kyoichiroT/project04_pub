@@ -1,0 +1,57 @@
+.card-list{
+    width:90%;
+}
+
+.oppo-Cards {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+}
+.decide-button{
+    font-size: 2rem;
+        /* width: 22rem;
+        height: 8rem;
+        font-size: 6rem; */
+}
+.selected {
+filter: brightness(25%);
+}
+h2{
+    margin: 0;
+}
+.selecting-card {
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    width: 80rem;
+    height: 50%;
+    z-index: 10;
+    opacity: 0.8;
+}
+.selecting-card.minimized {
+    background-color: black;
+    color: white;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+.minimize-button {
+    position: relative;
+    margin-right: auto;
+    width: 6rem;
+    /* height: 6rem; */
+}
+
+.minimize-button button{
+    width: 6rem;
+    height: 4rem;
+    font-size: 2rem;
+}
+.selected-cards.flex-item{
+    min-height: 5rem;
+}

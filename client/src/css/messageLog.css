@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+}
+
+.log-component ul{
+    height: 200px;
+    overflow-y: auto;
+    padding-left: 0;
+    border: 1px solid;
+    margin-top: 0;
+}
+.log-component .chat-title{
+    margin: 0;
+}

@@ -1,0 +1,180 @@
+.title-name{
+    text-align: center;
+}
+.back-ground-cards{
+    display: flex;
+}
+.game-title-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.card-descriptions.placeholder{
+    min-width: 17rem;
+}
+.game-title .card-descriptions .display-card-picture{
+    width: 12rem;
+    /* height: 15rem; */
+}
+.game-title .back-ground-cards .card-pic{
+    width: 7rem;
+    height: 10.2rem;
+}
+.game-title .card-list{
+    width: 60%;
+}
+.game-title .back-ground-cards .card-descriptions .card-pic{
+    width: 12rem;
+    height: 17.2rem;
+    margin: auto;
+}
+.game-title .back-ground-cards .card-picture.big{
+    width: 12rem;
+    /* height: 17.2rem; */
+    margin: auto;
+}
+/* .q-and-a-component{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: cornsilk;
+    display: flex;
+    flex-direction: column;
+}
+.question-and-answer{
+    margin-top: 2rem;
+    margin-left: 6rem;
+    padding-top: 1rem;
+    border-top: 1px solid;
+}
+.answer{
+    margin-top: 1rem;
+    text-align: left;
+}
+.what-this-game{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.question.important-sentence{
+    font-size: 2rem;
+}
+.answer.important-sentence{
+    font-size: 1.5rem;
+}
+.what-this-game .answer{
+    font-size: 1.2rem;
+}
+.q-and-a-header .close-button{
+    position: absolute;
+    border: 1px solid;
+    font-size: 4rem;
+}
+.close-button.bottom{
+    margin: 2rem auto 2rem auto;
+    border: 1px solid;
+    font-size: 4rem;
+}
+.open-q-and-a{
+    font-size: 4rem;
+    color: #ff3737;
+    border: 1px solid;
+    margin-right: auto;
+} */
+.player-name-input{
+    margin-bottom: 2rem;
+}
+
+.matched-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+}
+
+.matched-button button{
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.decide-turn-choice{
+    width: 20rem;
+}
+
+.turn-decide-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 11rem;
+}
+.turn-choice-buttons{
+    justify-content: space-between;
+    display: flex;
+}
+
+.turn-choice{
+    width: 8rem;
+    height: 4rem;
+    font-size: 1rem;
+}
+.turn-decide-submit-button{
+    height: 4rem;
+    font-size: 1rem;
+    width: 20rem;
+}
+.start-game-button{
+    height: 3rem;
+    font-size: 1rem;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+}
+.version{
+    font-size: 3rem;
+    text-align: end;
+}
+.match-start-button{
+    margin-bottom: 2rem;
+}
+
+/* スマートフォン用のスタイル */
+@media (max-width: 1200px) {
+    .back-ground-cards {
+        flex-direction: column;
+    }
+
+    .card-descriptions.placeholder {
+        order: 2;
+    }
+
+    .back-ground-cards .card-list {
+        order: 3;
+        width: 100%;
+    }
+
+    .matching-form-wrapper {
+        order: 1;
+    }
+
+    .game-title .back-ground-cards .card-pic {
+        width: 3rem;
+        height: 4.3rem;
+    }
+
+    .q-and-a-header .close-button {
+        font-size: 2rem;
+    }
+
+    .what-this-game{
+        margin: 0 2rem;
+    }
+
+    .question-and-answer {
+        margin: 0rem 2rem 1rem 2rem;
+    }
+
+    .close-button.bottom{
+        font-size: 2rem
+    }
+}

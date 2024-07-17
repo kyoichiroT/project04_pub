@@ -1,0 +1,66 @@
+/* 効果処理時のエフェクト */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+/* @keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+} */
+
+.card-animation {
+    /* ここでアニメーションの時間を調整 */
+    /* animation-duration: 2s;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+
+    animation-name: fadeInOut;
+    animation-duration: 1s;
+    /* フェードインとフェードアウトの合計時間 */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 12rem;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* カード発動時のエフェクト */
+@keyframes scaleCard {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1);
+        z-index: 5;
+    }
+
+    75% {
+        transform: scale(2);
+        z-index: 5;
+    }
+}
+
+.card-scale-animation {
+    animation-name: scaleCard;
+    animation-duration: 1s;
+    z-index: 5;
+    /* 合計アニメーション時間 */
+}

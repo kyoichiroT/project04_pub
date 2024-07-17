@@ -1,0 +1,50 @@
+.display-card-wrapper {
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    width: 80rem;
+    height: 100%;
+    z-index: 10;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.card-list {
+    width: 75%;
+}
+
+.oppo-Cards {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* width: 80rem; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.summons,
+.special-summon,
+.change,
+.attack,
+.activate,
+.hand-activate,
+.put{
+    display: flex;
+    flex-direction: column;
+}
+
+.disconnect{
+    z-index: 99;
+}
+.display-card-wrapper.minimized{
+    background-color: black;
+    color: white;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+.selected {
+    filter: brightness(25%);
+}

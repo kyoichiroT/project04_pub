@@ -1,0 +1,77 @@
+.q-and-a-component {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.question-and-answer {
+    margin-top: 2rem;
+    margin-left: 6rem;
+    padding-top: 1rem;
+    border-top: 1px solid;
+}
+
+.answer {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.what-this-game {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.question.important-sentence {
+    font-size: 2rem;
+}
+
+.answer.important-sentence {
+    font-size: 1.5rem;
+}
+
+.what-this-game .answer {
+    font-size: 1.2rem;
+}
+
+.q-and-a-header .close-button {
+    position: absolute;
+    border: 1px solid;
+    font-size: 4rem;
+}
+
+.close-button.bottom {
+    margin: 2rem auto 2rem auto;
+    border: 1px solid;
+    font-size: 4rem;
+}
+
+.open-q-and-a {
+    font-size: 4rem;
+    color: #ff3737;
+    border: 1px solid;
+    margin-right: auto;
+}
+.board-wrapper-wrapper .open-q-and-a{
+    width: 10rem;
+    text-align: center;
+}
+@media (max-width: 1200px) {
+    .q-and-a-header .close-button {
+        font-size: 2.5rem;
+    }
+
+    .what-this-game {
+        margin: 1rem;
+    }
+    .question-and-answer {
+        margin-left: 2rem;
+    }
+
+
+}
